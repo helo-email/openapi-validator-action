@@ -1,5 +1,9 @@
 import { setFailed } from '@actions/core';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import SwaggerParser from "@apidevtools/swagger-parser";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const validate = async (filePath) => {
     if (typeof filePath !== 'string') {
@@ -9,7 +13,6 @@ const validate = async (filePath) => {
     const fullPath = resolve(dir, filePath)
     console.log(`schema file full path:${fullPath}`)
     try {
-        const SwaggerParser = require("@apidevtools/swagger-parser")
         await SwaggerParser.validate(fullPath, { continueOnError: true })
         console.log("API specification is  valid ")
     }
