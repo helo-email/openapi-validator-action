@@ -1,5 +1,5 @@
 name: 'openapi-validator-action'
-author: 'Thiyagu GK'
+author: 'Helo Email'
 description: 'This action validates if the OpenAPI/Swagger schema file is valid or not.'
 inputs:
   filepath:
@@ -7,7 +7,7 @@ inputs:
     required: true
     default: 'openapi.yaml'
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'dist/index.js'
 branding:
   icon: 'file-text'
