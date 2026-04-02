@@ -10,7 +10,9 @@ jobs:
   validate-schema:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
+      - name: run tests
+        run: npm install && npm run test
       - name: openapi-github-action
         uses: ./
         with:

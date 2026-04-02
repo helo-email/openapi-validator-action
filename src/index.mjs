@@ -1,5 +1,5 @@
 import { getInput, setFailed } from '@actions/core';
-import validate from './validator';
+import validate from './validator.mjs';
 
 try {
     const filePath = getInput('filepath');
