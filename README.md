@@ -23,8 +23,8 @@ You should use `filepath: './schemas/openapi.yaml'`
 
 ```
 - name: 'validate openapi schema'
-  uses: thiyagu06/openapi-validator-action@v1
+  uses: helo-email/openapi-validator-action@v2
   with:
     filepath: 'openapi.yaml'
 ```
-You can specify version with `@v<release-version>`. It follows semantic release. For latest release, please check [releases](https://github.com/thiyagu06/openapi-validator-action/releases) page.
+You can specify version with `@v<release-version>`. It follows semantic release. For latest release, please check [releases](https://github.com/helo-email/openapi-validator-action/releases) page.
